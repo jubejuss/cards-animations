@@ -18,6 +18,7 @@
     --transition-ease: linear;
     --transform-duration: 1s;
     --transform-ease: ease-in-out;
+    --card-broder-radius: 1rem;
 }
 
 body {
@@ -26,6 +27,7 @@ body {
     justify-content: center;
     align-items: center;
     font-family: sans-serif;
+    gap: 1rem;
 }
 
 .content {
@@ -36,4 +38,8 @@ body {
     color: var(--content-color);
     display: grid;
     justify-content: center;
+}
+
+.card, .card-1, .card-2 {
+    border-radius: var(--card-broder-radius);
 }
