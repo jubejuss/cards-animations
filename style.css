@@ -1,0 +1,39 @@
+@import "button.css";
+@import "card-absolut.css";
+@import "card-pseudoelement.css";
+
+:root {
+    --card-width: 200px;
+    --card-height: 302px;
+    --card-1-width: 400px;
+    --card-1-height: 600px;
+    --card-2-width: 600px;
+    --card-2-height: 700px;
+    --content-font-size: 4rem;
+    --content-color: wheat;
+    --content-color-hover: blue;
+    --background-color: blue;
+    --overlay-url: url(overlay.svg);
+    --transition-duration: 0.25s;
+    --transition-ease: linear;
+    --transform-duration: 1s;
+    --transform-ease: ease-in-out;
+}
+
+body {
+    display: flex;
+    min-height: 100vh;
+    justify-content: center;
+    align-items: center;
+    font-family: sans-serif;
+}
+
+.content {
+    position: relative;
+    z-index: 1;
+    font-size: var(--content-font-size);
+    font-weight: bold;
+    color: var(--content-color);
+    display: grid;
+    justify-content: center;
+}

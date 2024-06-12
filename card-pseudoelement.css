@@ -1,0 +1,50 @@
+
+.card:hover .content {
+    color: var(--content-color-hover);
+}
+
+.card, .card-1 {
+    overflow: hidden;
+    background-color: var(--background-color);
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    & .content {
+        transition: all var(--transition-duration) ease-in-out;
+       }
+
+    &::before {
+        content: '';
+        background-image: var(--overlay-url);
+        height: 100%;
+        width: 100%;
+        display: block;
+        background-size: cover;
+        background-repeat: no-repeat;
+        transform: translateX(-100%);
+        position: absolute;
+        transition: transform var(--transition-duration) var(--transition-ease), background-position-x var(--transition-duration) var(--transition-ease) var(--transition-duration);
+    }
+
+    &:hover::before {
+        background-position-x: left;
+        transform: translateX(0);
+    }
+
+    &:not(:hover)::before {
+        transition: background-position-x var(--transition-duration) var(--transition-ease), transform var(--transition-duration) var(--transition-ease) var(--transition-duration);
+        background-position-x: right;
+        transform: translateX(-100%);
+    }
+}
+
+.card {
+    width: var(--card-width);
+    height: var(--card-height);
+}
+
+.card-1 {
+    width: var(--card-1-width);
+    height: var(--card-1-height);
+}

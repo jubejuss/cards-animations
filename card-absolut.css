@@ -1,0 +1,29 @@
+
+.card-2 {
+    width: var(--card-2-width);
+    height: var(--card-2-height);
+    background-color: var(--background-color);
+    overflow: hidden;
+    position: relative;
+    justify-content: center;
+    display: flex;
+    align-items: center;
+    & .content {
+     transition: all var(--transform-duration) ease-in-out;
+    }
+}
+
+.card-2 img {
+    height: 100%;
+    position: absolute;
+    left: 0;
+    transform: translateX(-100%);
+    transition: transform var(--transform-duration) var(--transform-ease);
+}
+
+.card-2:hover img {
+    transform: translateX(0);
+}
+.card-2:hover .content {
+    color: var(--content-color-hover);
+}
